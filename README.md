@@ -6,12 +6,13 @@ Fuck you, YouTube.
 
 ## Add-on
 
-# Firefox
+### Firefox
 
 Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/youtube-dislikes-counter/).
-[Source code](firefox/)
 
-# Chrome
+[source code](firefox/)
+
+### Chrome
 
 Extension is currently in build.
 
