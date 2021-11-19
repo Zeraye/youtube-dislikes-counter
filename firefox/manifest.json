@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube dislikes counter",
+  "version": "1.0.1",
+
+  "description": "Show live dislike counter on every youtube video.",
+
+  "icons": {
+    "512": "icons/icon-512.png"
+  },
+
+
+  "permissions": ["*://www.youtube.com/watch?*", "*://youtube-dislikes-counter.herokuapp.com/*", "tabs"],
+
+  "background": {
+    "scripts": ["showCounter.js"]
+  },
+
+  "page_action": {
+    "browser_style": true,
+    "default_icon": {
+      "512": "icons/page-action-icon-512.png"
+    },
+    "default_title": "Show dislikes",
+    "show_matches": ["*://www.youtube.com/watch?*"]
+  }
+}
