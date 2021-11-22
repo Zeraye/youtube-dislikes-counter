@@ -1,5 +1,3 @@
-This extension will not be longer maintained, use: [returnyoutubedislike](https://returnyoutubedislike.com/)
-
 # YouTube dislikes counter
 
 Fuck you, YouTube.
