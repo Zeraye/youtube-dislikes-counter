@@ -10,7 +10,7 @@
   },
 
 
-  "permissions": ["*://www.youtube.com/watch?*", "*://youtube-dislikes-counter.herokuapp.com/*", "tabs"],
+  "permissions": ["*://www.youtube.com/watch?*", "*://youtube-dislikes-counter.herokuapp.com/*", "tabs", "storage"],
 
   "background": {
     "scripts": ["showCounter.js"]
@@ -23,5 +23,13 @@
     },
     "default_title": "Show dislikes",
     "show_matches": ["*://www.youtube.com/watch?*"]
-  }
+  },
+	"browser_action": {
+		"default_icon": {
+			"16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+		},
+    "default_title": "Settings",
+    "default_popup": "popup/settings.html"
+	}
 }
