@@ -1,27 +1,49 @@
+const resetCounterOnDateChange = async () => {
+  const cache = (await browser.storage.local.get()) || {};
+
+  const currentDate = new Date();
+
+  if (cache["day"] !== currentDate.getDate() || cache["month"] !== currentDate.getMonth() || cache["year"] !== currentDate.getFullYear())
+    await browser.storage.local.set({ "counter": 100 });
+}
+
 window.onload = async (event) => {
+	await resetCounterOnDateChange();
+
 	const cache = (await browser.storage.local.get()) || {};
 
-	if (cache["counter"])
+	if (cache["api_key"] === "")
 		document.getElementById("counter").textContent = cache["counter"];
-	else {
-		await browser.storage.local.set({ "counter": 100});
-		document.getElementById("counter").textContent = 100;
-	}
+	else
+		document.getElementById("counter").textContent = "unlimited";
 
-	if (cache["api_key"])
-		document.getElementById("api_key").value = cache["api_key"];
+	document.getElementById("api_key").value = cache["api_key"];
 };
 
-const validate_api_key = async (api_key) => {
-	// TODO validate api key
-	if (api_key[0] === "a")
-		return false;
-	return true;
+const fetchResponse = async (api_key) => {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ "api_key": api_key }),
+  };
+
+  const response = await fetch("https://youtube-dislikes-counter.herokuapp.com/validate", requestOptions);
+
+  const data = await response.json();
+
+  return `${data["response"]}`
+};
+
+const validateApiKey = async (api_key) => {
+	const response = await fetchResponse(api_key);
+	if (response === "ok")
+		return true;
+	return false;
 }
 
 document.getElementById("save").addEventListener("click", async (event) => {
 	const api_key = document.getElementById("api_key").value;
-	const valid = await validate_api_key(api_key);
+	const valid = await validateApiKey(api_key);
 	
 	if (valid) {
 		document.getElementById("valid").removeAttribute("hidden");

@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Youtube dislikes counter",
-  "version": "1.0.1",
+  "name": "YouTube dislikes counter",
+  "version": "1.0.2",
 
-  "description": "Show live dislike counter on every youtube video.",
+  "description": "Show dislikes counter on every YouTube's video.",
 
   "icons": {
     "512": "icons/icon-512.png"
   },
 
 
-  "permissions": ["*://www.youtube.com/watch?*", "*://youtube-dislikes-counter.herokuapp.com/*", "tabs", "storage"],
+  "permissions": ["*://www.youtube.com/watch?*", "https://youtube-dislikes-counter.herokuapp.com/*", "tabs", "storage"],
 
   "background": {
     "scripts": ["showCounter.js"]
@@ -24,10 +24,11 @@
     "default_title": "Show dislikes",
     "show_matches": ["*://www.youtube.com/watch?*"]
   },
+  
 	"browser_action": {
 		"default_icon": {
-			"16": "icons/icon-16.png",
-      "32": "icons/icon-32.png"
+			"16": "icons/browser-action-icon-16.png",
+      "32": "icons/browser-action-icon-32.png"
 		},
     "default_title": "Settings",
     "default_popup": "popup/settings.html"
