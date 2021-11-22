@@ -1,3 +1,5 @@
+This extension will not be longer maintained, use: [returnyoutubedislike](https://returnyoutubedislike.com/)
+
 # YouTube dislikes counter
 
 Fuck you, YouTube.
@@ -11,10 +13,6 @@ Fuck you, YouTube.
 Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/youtube-dislikes-counter/).
 
 [source code](firefox/)
-
-### Chrome
-
-Extension is currently in build.
 
 ## Author
 
