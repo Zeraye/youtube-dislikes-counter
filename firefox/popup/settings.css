@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "Segoe UI";
+	background-color: #fdfdfd;
+	padding: 1rem;
+}
+
+.title {
+	margin-bottom: 1rem;
+}
+
+hr {
+	height: 1px;
+	background-color: #e8e8e8;
+}
+
+.content {
+	margin-top: 1rem;
+}
+
+#api_key {
+	border: 2px solid #e8e8e8;
+	padding: 0.2rem;
+}
+
+#save {
+	border: 2px solid #e8e8e8;
+	background-color: transparent;
+	padding: 0.2rem;
+}
+
+#save:hover {
+	background-color: #f0f0f0;
+}
+
+#save:active {
+	background-color: #e8e8e8;
+}
+
+#invalid {
+	color: red;
+}
+
+#valid {
+	color: green;
+}

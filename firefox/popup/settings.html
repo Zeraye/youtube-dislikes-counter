@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Settings</title>
+	<link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet"> 
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+	<h2 align="center" class="title">Settings</h2>
+	<hr>
+	<div class="content">
+		<p>Request left: <b><span id="counter">null</span></b></p>
+		<label for="api_key">YouTube API key (optional)</label>
+		<input type="text" id="api_key" name="api_key" value=""/>
+		<button id="save">save</button>
+		<p id="invalid" hidden>Invalid API key!</p>
+		<p id="valid" hidden>Valid API key!</p>
+	</div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
+
