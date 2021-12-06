@@ -2,7 +2,7 @@ const initializeLocalStorage = async () => {
   const cache = (await browser.storage.local.get()) || {};
 
   if (!cache["counter"])
-    await browser.storage.local.set({ "counter": 100 });
+    await browser.storage.local.set({ "counter": 999 });
 
   if (!cache["api_key"])
     await browser.storage.local.set({ "api_key": "" });
@@ -23,7 +23,7 @@ const resetCounterOnDateChange = async () => {
   const currentDate = new Date();
 
   if (cache["day"] !== currentDate.getDate() || cache["month"] !== currentDate.getMonth() || cache["year"] !== currentDate.getFullYear()) {
-    await browser.storage.local.set({ "counter": 100 });
+    await browser.storage.local.set({ "counter": 999 });
 		await browser.storage.local.set({ "day": currentDate.getDate() });
 		await browser.storage.local.set({ "month": currentDate.getMonth() });
 		await browser.storage.local.set({ "year": currentDate.getFullYear() });
