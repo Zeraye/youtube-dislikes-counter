@@ -1,6 +1,6 @@
 # IMPORTANT
 ### YOUTUBE TURN OFF API FOR DISLIKES, SO I TURN OFF ADDON (IT WILL JUST NOT WORK)
-### SEE ![THIS](https://www.returnyoutubedislike.com/)
+### SEE [THIS](https://www.returnyoutubedislike.com/)
 
 # YouTube dislikes counter
 
