@@ -1,6 +1,4 @@
-# IMPORTANT
-### YOUTUBE TURN OFF API FOR DISLIKES, SO I TURN OFF ADDON (IT WILL JUST NOT WORK)
-### SEE [THIS](https://www.returnyoutubedislike.com/)
+# UNMAINTAINED [SEE](https://www.returnyoutubedislike.com/)
 
 # YouTube dislikes counter
 
@@ -15,7 +13,3 @@ Fuck you, YouTube.
 Extension can be installed [here](https://addons.mozilla.org/en-US/firefox/addon/youtube-dislikes-counter/).
 
 [source code](firefox/)
-
-## Author
-
-The author of this repository is [Jakub Rudnik](https://github.com/Zeraye).
